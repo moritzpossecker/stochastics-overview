@@ -64,6 +64,16 @@ Wenn $X = "const"$, $Y = "const"$ oder $Y = a X + b$, dann gilt:
 
 $ "Cov"(X, Y)^2 = "Var"(X) "Var"(Y) $
 
+=== Korrelationskoeffizient
+
+$ rho_"XY" = "Cov"((X - mu_X) / sigma_X, (Y - mu) / sigma_Y) = "Cov"(X, Y) / (sigma_X sigma_Y) => -1 <= rho_"XY" <= 1 $
+
+Positive Korrelation: $rho > 0$
+
+Negative Korrelation: $rho < 0$
+
+Keine Korrelation: $rho = 0$
+
 === Standardabweichung
 
 $ sigma = sqrt(sigma^2) = sqrt("Var"(X)) $
@@ -85,6 +95,12 @@ $ F_Z (z) = F_X (sigma z + mu) $
 p-Quantile:
 
 $ x_p = sigma z_p + mu $
+
+=== Ungleichung von Tschebyscheff
+
+Für eine Zufallsvariable X mit Erwartungswert $mu$ und Varianz $sigma^2$ mit $c > 0$, gilt:
+
+$ P(abs(X - mu) >= c) <= sigma^2 / c^2 $
 
 == Beschreibende Statistik
 
