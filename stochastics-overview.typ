@@ -24,3 +24,5 @@
 #include "chapters/general.typ"
 
 #include "chapters/distributions.typ"
+
+#include "chapters/combinatoric.typ"
