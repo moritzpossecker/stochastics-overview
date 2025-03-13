@@ -135,7 +135,8 @@ $ Phi(-x) = 1 - Phi(x) $
 
 === Chi-Quadrat-/$chi^2$-Verteilung
 
-Für unabhängige, standardnormalverteilte Zufallsvariablen $Z_1, ..., Z_m$ mit $ X = Z_1^2 + ... + Z_m^2 $
+Für unabhängige, standardnormalverteilte Zufallsvariablen $Z_1, ..., Z_m$ mit 
+$ X = Z_1^2 + ... + Z_m^2 $
 heißt die Verteilung $X chi^2$-Verteilung mit m Freiheitsgraden.
 
 Schreibweise: $X ~ chi^2(m)$ 
@@ -152,9 +153,9 @@ $ X_1 + X_2 ~ chi^2(m_1 + m_2) $
 
 === (Student-)t-Verteilung
 
-Für $X ~ chi^2(m)$ und $Z ~ N(mu=0; sigma^2=1)$ heißt die Verteilung
-
-$T = Z / sqrt(X / m)$ t-Verteilung mit m Freiheitsgraden.
+Für $X ~ chi^2(m)$ und $Z ~ N(mu=0; sigma^2=1)$ mit 
+$ T = Z / sqrt(X / m) $ 
+heißt die Verteilung $T$ t-Verteilung mit m Freiheitsgraden.
 
 Schreibweise: $T ~ t(m)$
 
@@ -164,9 +165,9 @@ $ sigma^2(T) = m / (m - 2) "für" m > 2, "sonst:" n.d. $
 
 === F-Verteilung
 
-Für $X_1 ~ chi^2(m_1)$ und $X_2 ~ chi^2(m_2)$ heißt die Verteilung
-
-$X = (X_1 / m_1) / (X_2 / m_2)$ F(isher)-/Verteilung mit den Freiheitsgraden $m_1$ und $m_2$
+Für $X_1 ~ chi^2(m_1)$ und $X_2 ~ chi^2(m_2)$ mit 
+$X = (X_1 / m_1) / (X_2 / m_2)$ 
+heißt die Verteilung $X$ F(isher)-Verteilung mit den Freiheitsgraden $m_1$ und $m_2$
 
 Schreibweise: $X ~ F(m_1; m_2)$
 
