@@ -58,7 +58,7 @@ und:
 
 $ P(X = k) = lambda^k/k! e ^(- lambda) $
 
-== stetige Verteilungen
+== Stetige Verteilungen
 
 === Gleich-/Rechteckverteilung
 
