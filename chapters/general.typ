@@ -2,105 +2,15 @@
 
 == Grundbegriffe
 
-=== Erwartungswert
+#include "general/expected_value.typ"
 
-Für diskrete Zufallsvariablen:
+#include "general/variance.typ"
 
-$ E(X) = mu = sum_(i=1)^(n) p_i x_i $
+#include "general/correlation_coefficient.typ"
 
-Für stetige Zufallsvariablen ($f(x)$ ist die Dichtefunktion der Verteilung):
+#include "general/standard_deviation.typ"
 
-$ E(X) = mu = integral_(-oo)^oo x f(x) "d"x $
-
-Wenn $f$ symmetrisch um $x_0 in RR$, also $f(x_0 - x) = f(x_0 + x) forall x in RR$, dann gilt: 
-
-$ E(X) = x_0 $
-
-Linearität der Erwartungswerts:
-
-Für zwei Zufallsvariablen X und Y mit $lambda, a, b in RR$ gilt: 
-
-$ E(X + Y) = E(X) + E(Y) $
-
-$ E(lambda X) = lambda E(X) $
-
-$ E(a X + b) = a E(X) + b $
-
-Für zwei *unabhängige* Zufallsvariablen X und Y gilt:
-
-$ E(X dot Y) = E(X) dot E(Y) $
-
-=== Varianz
-
-$ s^2 =  sigma^2 = "Var"(X) $
-
-$ "Var"(X) = E((X - mu)^2) $
-
-$ "Var"(X) = E(X^2) - mu^2 $
-
-$ "Var"(X)= 1/n - 1 sum_(i = 1)^(n)(x_i - overline(x))^2 $
-
-Für eine Zufallsvariable X und $a, b in RR$ und $Y = a X + b$ gilt:
-
-$ "Var"(Y) = a² "Var"(X) <=> sigma_Y = abs(a)sigma_X $
-
-Für zwei Zufallsvariablen X und Y gilt:
-
-$ "Var"(X + Y) = "Var"(X) + 2"Cov"(X, Y) + "Var"(Y) $
-
-$ "Cov"(X, Y) = E((X - mu_X)(Y - mu_Y)) = E(X dot Y) - mu_X mu_Y $
-
-Sind die Zufallsvariablen X und Y unabhängig, gilt:
-
-$ "Cov"(X, Y) = 0 <=> "Var"(X + Y) = "Var"(X) + "Var"(Y) $ 
-
-Das bedeutet umgekehrt aber nicht, dass wenn $"Cov" = 0$,  X und Y unabhängig sind. 
-
-(Unabhängigkeit $=>$ Unkorreliertheit)
-
-$ "Cov"(X, Y)^2 <= "Var"(X) "Var"(Y) $
-
-Wenn $X = "const"$, $Y = "const"$ oder $Y = a X + b$, dann gilt:
-
-$ "Cov"(X, Y)^2 = "Var"(X) "Var"(Y) $
-
-=== Korrelationskoeffizient
-
-$ rho_"XY" = "Cov"((X - mu_X) / sigma_X, (Y - mu) / sigma_Y) = "Cov"(X, Y) / (sigma_X sigma_Y) => -1 <= rho_"XY" <= 1 $
-
-Positive Korrelation: $rho > 0$
-
-Negative Korrelation: $rho < 0$
-
-Keine Korrelation: $rho = 0$
-
-=== Standardabweichung
-
-$ sigma = sqrt(sigma^2) = sqrt("Var"(X)) $
-
-Standardisierte Zufallsvariable:
-
-Für eine Zufallsvariable X mit Erwartungswert $mu$ und Standardabweichung $sigma != 0$, dann ist Z die _standardisierte Zufallsvariable_ Z:
-
-$ Z = (X - mu) / sigma $
-
-$ E(Z) = 0 $
-
-$ "Var"(Z) = 1 $
-
-$ F_X (x) = F_Z ((x - mu) / sigma) $
-
-$ F_Z (z) = F_X (sigma z + mu) $
-
-p-Quantile:
-
-$ x_p = sigma z_p + mu $
-
-=== Ungleichung von Tschebyscheff
-
-Für eine Zufallsvariable X mit Erwartungswert $mu$ und Varianz $sigma^2$ mit $c > 0$, gilt:
-
-$ P(abs(X - mu) >= c) <= sigma^2 / c^2 $
+#include "general/chebyshevs_inequality.typ"
 
 == Beschreibende Statistik
 
