@@ -26,3 +26,5 @@
 #include "chapters/distributions.typ"
 
 #include "chapters/combinatoric.typ"
+
+#include "chapters/ConditionalProbability.typ"
