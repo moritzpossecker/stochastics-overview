@@ -24,5 +24,7 @@
 
 #include "distributions/f_dstribution.typ"
 
-== Tests
+== Hypothesentests
+
+#include  "distributions/tests.typ"
 
