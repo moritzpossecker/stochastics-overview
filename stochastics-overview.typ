@@ -27,4 +27,4 @@
 
 #include "chapters/combinatoric.typ"
 
-#include "chapters/ConditionalProbability.typ"
+#include "chapters/conditional_probability.typ"
