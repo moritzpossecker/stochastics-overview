@@ -6,7 +6,7 @@ $ "Var"(X) = E((X - mu)^2) $
 
 $ "Var"(X) = E(X^2) - mu^2 $
 
-$ "Var"(X)= 1/n - 1 sum_(i = 1)^(n)(x_i - overline(x))^2 $
+$ "Var"(X)= 1/(n - 1) sum_(i = 1)^(n)(x_i - overline(x))^2 $
 
 Für eine Zufallsvariable X und $a, b in RR$ und $Y = a X + b$ gilt:
 
