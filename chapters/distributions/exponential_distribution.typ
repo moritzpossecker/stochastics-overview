@@ -1,4 +1,5 @@
 === Exponentialverteilung
+(Berechnung der Duer zufälliger Zeitintervalle)
 
 $ F(X) = cases(
   1 - e^(-k x) &"für" x > 0,
@@ -16,4 +17,6 @@ $ sigma^2 = 1 / k^2 $
 
 $ sigma = 1 / k $
 
-$ x_p = -ln(1 - p) / lambda $
+$ x_p = -ln(1 - p) / k $
+
+$ x_med = ln(2) / k $
