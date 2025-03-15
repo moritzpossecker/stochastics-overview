@@ -23,3 +23,6 @@
 #include "distributions/t_distribution.typ"
 
 #include "distributions/f_dstribution.typ"
+
+== Tests
+
