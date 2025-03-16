@@ -6,9 +6,11 @@ Schreibweise: $X ~ H(n; M; N)$
 
 $N$ - Anzahl aller Elemente der Grundgesamtheit
 
-$M$ - Anzahl der Elemente mit besonderer Eigenschaft 
+$M$ - Anzahl der Elemente mit besonderer Eigenschaft in $N$
 
 $n$ - Anzahl der Elemente der Stichprobe
+
+$k$ - Anzahl der Elemente mit besonderer Eigenschaft in $n$
 
 Dichtefunktion $ f(x)=P(X = k) = (binom(M, k) binom(N - M, n - k)) / binom(N, n)$
 

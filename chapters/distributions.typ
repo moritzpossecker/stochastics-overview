@@ -23,3 +23,8 @@
 #include "distributions/t_distribution.typ"
 
 #include "distributions/f_dstribution.typ"
+
+== Hypothesentests
+
+#include  "distributions/tests.typ"
+
