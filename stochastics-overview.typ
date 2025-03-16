@@ -18,6 +18,8 @@
 
 #show heading.where(level: 2): set block(above: 1.75em, below: 1.5em)
 
+#outline(depth: 3)
+
 #counter(page).update(1)
 #set page(numbering: "1")
 
