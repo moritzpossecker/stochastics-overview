@@ -2,7 +2,7 @@
 
 Für unabhängige, standardnormalverteilte Zufallsvariablen $Z_1, ..., Z_m$ mit 
 $ X = Z_1^2 + ... + Z_m^2 $
-heißt die Verteilung $X chi^2$-Verteilung mit m Freiheitsgraden.
+heißt die Verteilung $X$ $chi^2$-Verteilung mit $m$ Freiheitsgraden.
 
 Schreibweise: $X ~ chi^2(m)$ 
 

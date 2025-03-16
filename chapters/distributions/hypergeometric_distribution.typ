@@ -4,7 +4,7 @@
 
 Schreibweise: $X ~ H(n; M; N)$
 
-$N$ - Anzahl aller Elemente der Grundgesamtheit
+$N$ - Anzahl der Elemente der Grundgesamtheit
 
 $M$ - Anzahl der Elemente mit besonderer Eigenschaft in $N$
 
