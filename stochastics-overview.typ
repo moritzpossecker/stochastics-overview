@@ -12,8 +12,6 @@
   leading: 0.52em,
 )
 
-#outline()
-
 #set heading(numbering: "1.")
 
 #show heading.where(level: 1): set block(above: 1.75em, below: 1.5em)
