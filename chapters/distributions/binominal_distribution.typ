@@ -61,6 +61,8 @@ $b equiv$ Anzahl Siege, die Spieler B benötigt zum Gewinnen benötigt
 
 $p equiv$ Wahrscheinlichkeit, dass Spieler A eine Runde gewinnt
 
+$P_A equiv$ Wahrscheinlichkeit, dass Spieler A insgesamt gewinnt
+
 $ P_A = sum^(b-1)_(j=0) binom(a + j - 1, j) p^a (1-p)^j $
 
 
