@@ -25,6 +25,8 @@
 
 #include "chapters/distributions.typ"
 
+#include "chapters/confidence_interval.typ"
+
 #include "chapters/combinatoric.typ"
 
 #include "chapters/conditional_probability.typ"
