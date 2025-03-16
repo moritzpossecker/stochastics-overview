@@ -8,7 +8,7 @@ p - Wahrscheinlichkeit für Element mit besonderer Eigenschaft
 
 $ P(X = k) = binom(n, k) p^k (1 - p)^(n-k) $
 
-$ E(X) = n p $
+$ E(X) = mu = n p $
 
 $ sigma^2 = n p q = n p (1 - p) $
 
