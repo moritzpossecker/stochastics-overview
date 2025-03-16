@@ -1,5 +1,7 @@
 === Hypergeometrische Verteilung
 
+(für Experimente ohne Zurücklegen verwendet)
+
 Schreibweise: $X ~ H(n; M; N)$
 
 $N$ - Anzahl aller Elemente der Grundgesamtheit
@@ -10,11 +12,15 @@ $n$ - Anzahl der Elemente der Stichprobe
 
 $k$ - Anzahl der Elemente mit besonderer Eigenschaft in $n$
 
-$ P(X = k) = (binom(M, k) binom(N - M, n - k)) / binom(N, n) $
+Dichtefunktion $ f(x)=P(X = k) = (binom(M, k) binom(N - M, n - k)) / binom(N, n)$
+
+Verteilungsfunktion $ F(x) = P(X<=x)=sum_(k=1)^(x)f(k) $
 
 $ E(X) = n M / N $
 
 $ sigma^2 = n M / N (1 - M / N) (N - n) / (N - 1) $
+
+
 
 Mögliche Approximierungen:
 

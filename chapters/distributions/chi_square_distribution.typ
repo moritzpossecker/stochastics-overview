@@ -15,3 +15,7 @@ Additionseigenschaft:
 Für $X_1 ~ chi^2(m_1)$ und $X_2 ~ chi^2(m_2)$ gilt:
 
 $ X_1 + X_2 ~ chi^2(m_1 + m_2) $
+
+==== Chi-Quadratverteilung mittels Standardnormalverteilung
+
+$ x^2_alpha = 1/2 (z_alpha + sqrt(2n -1))^2  | n > 30 $

@@ -9,3 +9,8 @@ Schreibweise: $T ~ t(m)$
 $ E(T) = m "für" m > 1, "sonst:" n.d. $
 
 $ sigma^2(T) = m / (m - 2) "für" m > 2, "sonst:" n.d. $
+
+==== t-Verteilung mittels Standardnormalverteilung
+
+für n > 30 gilt:
+$ T = Z / sqrt(1/n X^2_m) $
