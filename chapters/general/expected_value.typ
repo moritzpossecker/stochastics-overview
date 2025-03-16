@@ -12,7 +12,7 @@ Wenn $f$ symmetrisch um $x_0 in RR$, also $f(x_0 - x) = f(x_0 + x) forall x in R
 
 $ E(X) = x_0 $
 
-Linearität der Erwartungswerts:
+Linearität des Erwartungswerts:
 
 Für zwei Zufallsvariablen X und Y mit $lambda, a, b in RR$ gilt: 
 

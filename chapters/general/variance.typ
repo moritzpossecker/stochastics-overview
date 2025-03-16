@@ -28,6 +28,6 @@ Das bedeutet umgekehrt aber nicht, dass wenn $"Cov" = 0$,  X und Y unabhängig s
 
 $ "Cov"(X, Y)^2 <= "Var"(X) "Var"(Y) $
 
-Wenn $X = "const"$, $Y = "const"$ oder $Y = a X + b$, dann gilt:
+Wenn $X = "konst."$, $Y = "konst."$ oder $Y = a X + b$, dann gilt:
 
 $ "Cov"(X, Y)^2 = "Var"(X) "Var"(Y) $
