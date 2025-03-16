@@ -1,5 +1,5 @@
 === Exponentialverteilung
-(Berechnung der Duer zufälliger Zeitintervalle)
+(Berechnung der Dauer zufälliger Zeitintervalle)
 
 $ F(X) = cases(
   1 - e^(-k x) &"für" x > 0,
