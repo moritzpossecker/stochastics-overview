@@ -75,4 +75,23 @@ B: 7-n-mal Sand, 15-(7-n) = 8+n Brause
 
 $P("nicht erwischt werden") = (10-n)/10 (8+n)/15$ soll maximiert werden. $-->$ nach $n$ umstellen
 
+== Anstoßen auf Party
+
+== Würfeln bis 6 geworfen wird
+
+Es wird gewürfelt bis eine 6 geworfen wird. $X$ sei die Anzahl der Versuche bis zum Erfolg. Gesucht ist der Erwartungswert von $X$.
+
+$ P(X = x_1 = 1) = 1 / 6 $
+
+$ P(X = x_2 = 2) = 5 / 6 dot 1 / 6 $
+
+$ P(X = x_k = k) = (5 / 6)^(k - 1) dot 1 / 6 $
+
+$ E(X) = sum_(k=1)^oo x_i p_i = sum_(k=1)^oo k P(X = k) = sum_(k=1)^oo k dot (5 / 6)^(k-1) dot 1 / 6 $
+
+$ sum_(k=0)^oo q^k = 1 / (1 - q) | d / (d x) $
+
+$ ==> sum_(k=0)^oo k q^(k - 1) = 1 / (1 - q)^2 $
+
+$ E(X) = 1 / 6 dot sum_(k=1)^oo k dot (5 / 6)^(k-1) = 1 / 6 dot 1 / (1 - 5 / 6)^2 = 6 $
 
