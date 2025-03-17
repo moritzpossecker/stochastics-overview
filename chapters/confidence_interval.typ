@@ -24,7 +24,7 @@ $ [accent(x,-)-t_(n-1;1-alpha/2)s/root(,n),accent(x,-)+t_(n-1;1-alpha/2)s/root(,
 
 den Erwartungswert $mu$ mit einer Wahrscheinlichkeit von 1 - $a$
 
-== Vergleich für Erwartungswerte von zwei Normalverteilungen
+== Für den Vergleich der Erwartungswerte von zwei Normalverteilungen
 
 === bei bekannten $sigma$
 
@@ -57,7 +57,9 @@ $ g ± = accent(x,-)_1 - accent(x,-)_2 ± " " t_(n_1 + n_2 - 2; 1 - alpha/2) " "
 den gesuchten Parameter $mu_1 - mu_2$ mit einer Wahrscheinlichkeit von 1 - $a$
 
 ==== $n_1 = n_2$
-Folgende vereinfachte Form ist anwendbar
+Grundlegend gleiche Vorgehensweise wie bei $n_1 != n_2$
+
+- Für die Berechnung der Freiheitsgrade muss man $2(n-1)$ rechnen 
 
 $ [accent(x,-)_1 - accent(x,-)_2 - t_(2(n-1);1-a/2)" "root(,(s^2_1 + s^2_2)/(n)),accent(x,-)_1 - accent(x,-)_2 + t_(2(n-1);1-a/2)" "root(,(s^2_1 + s^2_2)/(n))] $
 
@@ -73,7 +75,7 @@ die gesuchte Varianz $sigma^2$ bzw. das Konfidenzintervall
 $ [root(,((n-1)s^2)/(X^2_(n-1;1-alpha/2)))" , "root(,((n-1)s^2)/(X^2_(n-1;alpha/2)))] $
 die gesuchte Standardabweichung $sigma$ mit einer Wahrscheinlichkeit von jeweils 1 - $alpha$
 
-== Für eine Wahrscheinlichkeit
+== Für eine Wahrscheinlichkeit bzw. Anteil (F-Verteilung)
 
 === $n > 20$
 
@@ -82,16 +84,17 @@ die gesuchte Standardabweichung $sigma$ mit einer Wahrscheinlichkeit von jeweils
 - Ziehe eine Stichprobe vom Umfang $n$ und berechne den Anteil $accent(p,-)$ der Elemente mit der interessierenden Eigenschaft darin
 - Bestimme das Quantil $z_(1-alpha/2)$ der Standardnormalverteilung
 - Dann überdeckt das Konfidenzintervall $[g-,g+]$ mit
-$ g± =  (n)/(n+z^2_1-alpha/2)(accent(p,-)+(z^2_1-alpha/2)/(2n)±z^2_1-alpha/2" "root(,(accent(p,-)(1-accent(p,-)))/(n)+ (z^2_1-alpha/2)/(4n^2))) $
+$ g± =  (n)/(n+z^2_1-alpha/2)(accent(p,-)+(z^2_1-alpha/2)/(2n)±z_1-alpha/2" "root(,(accent(p,-)(1-accent(p,-)))/(n)+ (z^2_1-alpha/2)/(4n^2))) $
 den gesuchten Parameter $p$ mit der Wahrscheinlichkeit 1 - $alpha$, wobei die Intervallgrenzen Näherungen sind.
 ==== $n accent(p,-)(1-accent(p,-)) > 9$
+Gleiche Vorgehensweise wie bei $n accent(p,-)(1-accent(p,-)) <= 9$
 $ [accent(p,-) - z_(1-alpha/2)" "root(,(accent(p,-)(1-accent(p,-)))/(n))" , "accent(p,-) + z_(1-alpha/2)" "root(,(accent(p,-)(1-accent(p,-)))/(n))] $
-=== $n < 20$
+=== $n <= 20$
 - lege das Konfidenzniveau 1 - $alpha$ fest
 - Ziehe eine Stichprobe vom Umfang $n$ und zähle die Anzahl $x$ der Elemente mit der interessierenden Eigenschaft darin
 - Bestimme die Quantile
 $ F_(2(n-x+1);2x;1-alpha/2) "  sowie  " F_(2(x+1);2(n-x);alpha/2) $
 der $F$-Verteilung
 -Dann überdeckt das Konfidenzintervall $[g-,g+]$ mit
-$ g- = (x)/(x+(n-x+1)F_(2(n-x+1);2x;1-alpha/2)) "   " g+ = ((x+1)F_(2(x+1);2(n-x);alpha/2))/(n - x +(x+1)F_(2(n-x+1);2x;1-alpha/2)) $
+$ g- = (x)/(x+(n-x+1)F_(2(n-x+1);2x;1-alpha/2)) "   " g+ = ((x+1)F_(2(x+1);2(n-x);alpha/2))/(n - x +(x+1)F_(2(x+1);2(n-x);alpha/2)) $
 den gesuchten Parameter $p$ mit der Wahrscheinlichkeit 1 - $alpha$
