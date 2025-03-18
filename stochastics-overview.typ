@@ -7,6 +7,7 @@
   font: "New Computer Modern",
   size: 11pt
 )
+
 #set par(
   justify: true,
   leading: 0.52em,
@@ -34,4 +35,3 @@
 #include "chapters/conditional_probability.typ"
 
 #include "chapters/examples.typ"
-
