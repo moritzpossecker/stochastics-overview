@@ -131,8 +131,26 @@ $ "Anzahl der günstigen Fälle " equiv binom(4,2) binom(6,2) binom(4,2) binom(2
 
 $ P = (binom(4,2) binom(6,2) binom(4,2) binom(2,1) binom(1,1))/4^6 = 1080/4096 approx 26,37% $
 
+== Mindestens 2 gerade Zahlen würfeln
+Wie oft muss man mindestens würfeln, damit mit einer Wahrscheinlichkeit von mehr als 95% mindestens zweimal eine gerade Zahl geworfen wird?
 
-== Anstoßen auf Party
+Gegenereignis bilden:
+
+ $P(x>=2)=1-P(x=1)-P(x=0)$
+
+ Wahrscheinlichkeiten mit Binominialverteilung berechnen:
+ 
+ $P(x=0)= binom(1,0)(1/2)^0(1-1/2)^(n-0) = (1/2)^n$
+ 
+ $P(x=1)= binom(n,1)(1/2)^1(1-1/2)^(n-1) =n dot 1/2 dot (1/2)^(n-1)=n dot (1/2)^2$
+
+ Umstellen nach $n$:
+ 
+ $P(x>=2)=1-(1/2)^n-n(1/2)^n = 0,95$
+
+$(1/2)^n+n(1/2)^n=0,05$
+
+$n=7,39 --> n=8$
 
 == Würfeln bis 6 geworfen wird
 
