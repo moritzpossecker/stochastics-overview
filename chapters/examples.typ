@@ -132,4 +132,53 @@ $ "Anzahl der günstigen Fälle " equiv binom(4,2) binom(6,2) binom(4,2) binom(2
 $ P = (binom(4,2) binom(6,2) binom(4,2) binom(2,1) binom(1,1))/4^6 = 1080/4096 approx 26,37% $
 
 
+== Anstoßen auf Party
 
+== Würfeln bis 6 geworfen wird
+
+Es wird gewürfelt bis eine 6 geworfen wird. $X$ sei die Anzahl der Versuche bis zum Erfolg. Gesucht ist der Erwartungswert von $X$.
+
+$ P(X = x_1 = 1) &= 1 / 6 \
+  P(X = x_2 = 2) &= 5 / 6 dot 1 / 6 \
+  P(X = x_k = k) &= (5 / 6)^(k - 1) dot 1 / 6 $
+
+$ E(X) = sum_(k = 1)^oo x_i p_i = sum_(k = 1)^oo k P(X = k) = sum_(k = 1)^oo k dot (5 / 6)^(k - 1) dot 1 / 6 $
+
+$ sum_(k = 0)^oo q^k = 1 / (1 - q) ==>^(d / (d q)) sum_(k = 0)^oo k q^(k - 1) = 1 / (1 - q)^2 $
+
+$ E(X) = 1 / 6 dot sum_(k = 1)^oo k dot (5 / 6)^(k - 1) = 1 / 6 dot 1 / (1 - 5 / 6)^2 = 6 $
+
+== Anstoßen auf einem Fest
+
+Die Anzahl der "Kling" wird gezählt. A sagt $>500$, B sagt $<550$.
+Wie viele Gäste sind auf der Party unter der Annahme, dass jeder mit jedem anderen anstößt?
+
+$ 500 <= X <= 550 $
+
+$n$ sei die Anzahl der Gäste.
+
+=== Ansatz A: über Summe
+
+#h(1fr) $sum_(k = 1)^n k = (n (n + 1)) / 2$ #h(1fr) $X = sum_(k = 1)^(n - 1) k = ((n - 1) n) / 2$ #h(1fr)
+
+$ 500 <=^! ((n - 1) n) / 2 <=> 0 <=^! n^2 - n - 1000 <=> n >= 32.1 $
+
+$ 550 >=^! ((n - 1) n) / 2 <=> 0 >=^! n^2 - n - 1100 <=> n <= 33.7 $
+
+$ 32.1 <= n <= 33.7 and n in NN => n = 33 $
+
+Es sind 33 Gäste auf der Party.
+
+Probe:
+
+$ X = sum_(k = 1)^(33 - 1) = 528 => 500 <= X <= 550 $
+
+=== Ansatz B: über Binomialkoeffizienten
+
+$ 500 <= binom(n, 2) = n! / (2! (n - 2)!) = (n (n - 1)) / 2 <= 550 $
+
+Danach quadratische Gleichungen lösen wie in Ansatz A.
+
+Probe:
+
+$ X = binom(33, 2) = 528 => 500 <= X <= 550 $
