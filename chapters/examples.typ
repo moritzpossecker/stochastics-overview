@@ -104,3 +104,127 @@ Ein Würfel wird einmal geworfen. Sei X die Augenzahl. Dann ist der Erwartungswe
   Beim Würfeln fallen die Werte 2, 3, 4, 5 ins Intervall $(3/2, 11/2)$. Die Wahrscheinlichkeit, eine 2, 3, 4 oder 5 zu würfeln beträgt $P(X)= 4/6$
 
 
+== Lieferung von Einheiten
+
+In einer Lieferung sind 2000 Einheiten, davon sind 60 fehlerhaft. Es wird eine Stichprobe von 50 Stück entnommen. Wie groß ist die Wahrscheinlichkeit, dass darunter *genau* 2 fehlerhafte Einheiten sind?
+
+a) Berechnen Sie die Wahrscheinlichkeit exakt.
+
+b) Berechnen Sie die Wahrscheinlichkeit durch Näherung mit der Binominialverteilung
+
+zu a) 
+
+Ziehen ohne zurücklegen $-->$ Hypergeometrische Verteilung mit:
+
+$N = 2000$
+
+$M = 60$
+
+$n = 50$
+
+$ P(X = 2) = (binom(60, 2) binom(1940, 48))/binom(2000, 50) approx 25,9 % $
+
+zu b)
+
+Näherung ist zulässig, da $n <= N/20$
+
+
+$p = 60 / 2000 = 0,03$
+
+$ P(X = 2) approx binom(50, 2) times 0,03^2 times 0,97^48 approx 25,6% $
+
+== Ostereier in 4 verschiedenen Farben
+
+6 Ostereier in 4 verschiedenen Farben. Die Eier werden zufällig ausgewählt und alle Farben sind gleich wahrscheinlich.
+
+Wie groß ist die Wahrscheinlichkeit, dass bei den gekauften Eiern 2 Farben je 2 mal vertreten sind udn 2 Farben je einmal?
+
+Überlegung: $ P = "Anzahl der günstigen Fälle" / "Anzahl der möglichen Fälle" $
+
+$"Anzahl der möglichen Fälle " equiv 4^6 $ $-> $ Jedes Ei kann 4 mögl. Farben annehmen
+
+Überlegung zur Anzahl der günstigen Fälle:
+
+- Möglichkeiten, die doppelt vorkommenden Farben zu wählen: $binom(4,2)$
+
+- Möglichkeiten, die Plätze der ersten doppelten Farbe zu wählen: $binom(6,2)$
+
+- Möglichkeiten, die Plätze der zweiten doppelten Farbe zu wählen: $binom(4,2)$
+
+- Möglichkeiten, den Platz für die erste einzelne Farbe zu wählen: $binom(2,1)$
+
+- Möglichkeiten, den Platz für die zweite einzelne Farbe zu wählen: $binom(1,1)$
+
+$ "Anzahl der günstigen Fälle " equiv binom(4,2) binom(6,2) binom(4,2) binom(2,1) binom(1,1) $
+
+$ P = (binom(4,2) binom(6,2) binom(4,2) binom(2,1) binom(1,1))/4^6 = 1080/4096 approx 26,37% $
+
+== Mindestens 2 gerade Zahlen würfeln
+Wie oft muss man mindestens würfeln, damit mit einer Wahrscheinlichkeit von mehr als 95% mindestens zweimal eine gerade Zahl geworfen wird?
+
+Gegenereignis bilden:
+
+ $P(x>=2)=1-P(x=1)-P(x=0)$
+
+ Wahrscheinlichkeiten mit Binominialverteilung berechnen:
+ 
+ $P(x=0)= binom(1,0)(1/2)^0(1-1/2)^(n-0) = (1/2)^n$
+ 
+ $P(x=1)= binom(n,1)(1/2)^1(1-1/2)^(n-1) =n dot 1/2 dot (1/2)^(n-1)=n dot (1/2)^2$
+
+ Umstellen nach $n$:
+ 
+ $P(x>=2)=1-(1/2)^n-n(1/2)^n = 0,95$
+
+$(1/2)^n+n(1/2)^n=0,05$
+
+$n=7,39 --> n=8$
+
+== Würfeln bis 6 geworfen wird
+
+Es wird gewürfelt bis eine 6 geworfen wird. $X$ sei die Anzahl der Versuche bis zum Erfolg. Gesucht ist der Erwartungswert von $X$.
+
+$ P(X = x_1 = 1) &= 1 / 6 \
+  P(X = x_2 = 2) &= 5 / 6 dot 1 / 6 \
+  P(X = x_k = k) &= (5 / 6)^(k - 1) dot 1 / 6 $
+
+$ E(X) = sum_(k = 1)^oo x_i p_i = sum_(k = 1)^oo k P(X = k) = sum_(k = 1)^oo k dot (5 / 6)^(k - 1) dot 1 / 6 $
+
+$ sum_(k = 0)^oo q^k = 1 / (1 - q) ==>^(d / (d q)) sum_(k = 0)^oo k q^(k - 1) = 1 / (1 - q)^2 $
+
+$ E(X) = 1 / 6 dot sum_(k = 1)^oo k dot (5 / 6)^(k - 1) = 1 / 6 dot 1 / (1 - 5 / 6)^2 = 6 $
+
+== Anstoßen auf einem Fest
+
+Die Anzahl der "Kling" wird gezählt. A sagt $>500$, B sagt $<550$.
+Wie viele Gäste sind auf der Party unter der Annahme, dass jeder mit jedem anderen anstößt?
+
+$ 500 <= X <= 550 $
+
+$n$ sei die Anzahl der Gäste.
+
+=== Ansatz A: über Summe
+
+#h(1fr) $sum_(k = 1)^n k = (n (n + 1)) / 2$ #h(1fr) $X = sum_(k = 1)^(n - 1) k = ((n - 1) n) / 2$ #h(1fr)
+
+$ 500 <=^! ((n - 1) n) / 2 <=> 0 <=^! n^2 - n - 1000 <=> n >= 32.1 $
+
+$ 550 >=^! ((n - 1) n) / 2 <=> 0 >=^! n^2 - n - 1100 <=> n <= 33.7 $
+
+$ 32.1 <= n <= 33.7 and n in NN => n = 33 $
+
+Es sind 33 Gäste auf der Party.
+
+Probe:
+
+$ X = sum_(k = 1)^(33 - 1) = 528 => 500 <= X <= 550 $
+
+=== Ansatz B: über Binomialkoeffizienten
+
+$ 500 <= binom(n, 2) = n! / (2! (n - 2)!) = (n (n - 1)) / 2 <= 550 $
+
+Danach quadratische Gleichungen lösen wie in Ansatz A.
+
+Probe:
+
+$ X = binom(33, 2) = 528 => 500 <= X <= 550 $
