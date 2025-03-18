@@ -18,6 +18,8 @@ der gesuchten Erwartungswert $mu$ mit einer Wahrscheinlichkeit von 1 - $alpha$
 - Lege das Konfidenzniveau 1 - $alpha$ fest
 - Ziehe eine Stichprobe vom Umfang $n$ und berechne $accent(x,-)$ sowie $s$
 
+$ s = sqrt(1/(n-1) sum_(i = 1)^(n)(x_i - overline(x))^2 ) $
+
 - Bestimme das Quantil $t_(n-1;1-alpha/2)$ der $t$-Verteilung mit $n - 1$ Freiheitsgraden
 - Dann überdeckt das Konfidenzintervall
 $ [accent(x,-)-t_(n-1;1-alpha/2)s/root(,n),accent(x,-)+t_(n-1;1-alpha/2)s/root(,n)] $
