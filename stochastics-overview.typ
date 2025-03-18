@@ -32,6 +32,3 @@
 #include "chapters/combinatoric.typ"
 
 #include "chapters/conditional_probability.typ"
-
-#include "chapters/examples.typ"
-
